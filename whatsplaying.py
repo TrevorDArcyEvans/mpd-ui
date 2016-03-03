@@ -4,8 +4,9 @@ import subprocess
 import time
 
 lcd = lcddriver.lcd()
+curr = ""
 
-def ScrollDisplay(curr):
+def ScrollDisplay():
   lcd.lcd_clear()
   # nasty hack to simulate scrolling text
   sep = " # "
@@ -19,7 +20,7 @@ def ScrollDisplay(curr):
     time.sleep(0.35)
 
 while True:
-  curr = subprocess.check_output(['mpc', 'current']).split('\n')
-  print curr[0]
-  ScrollDisplay(curr[0])
+  curr = subprocess.check_output(['mpc', 'current']).split('\n')[0]
+  print curr
+  ScrollDisplay()
   time.sleep(10)
