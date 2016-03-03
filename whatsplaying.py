@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import lcddriver
 from time import *
 
