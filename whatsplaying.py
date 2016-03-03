@@ -10,8 +10,7 @@ def ScrollDisplay():
   lcd.lcd_clear()
   # nasty hack to simulate scrolling text
   sep = " # "
-  dispStr = curr + sep + curr + sep + curr + sep + curr + sep
-  dispStr = dispStr + dispStr + dispStr
+  dispStr = curr + sep + curr + sep
   strLen = len(dispStr)
   for i in range(0, strLen):
     lcd.lcd_clear()
@@ -21,6 +20,5 @@ def ScrollDisplay():
 
 while True:
   curr = subprocess.check_output(['mpc', 'current']).split('\n')[0]
-  print curr
+  #print curr
   ScrollDisplay()
-  time.sleep(10)
