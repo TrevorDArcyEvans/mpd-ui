@@ -16,7 +16,7 @@ def ScrollDisplay():
     lcd.lcd_clear()
     lcd.lcd_display_string(dispStr[i : i + 15], 1)
     lcd.lcd_display_string(dispStr[i + 16 : i + 31], 2)
-    time.sleep(0.35)
+    time.sleep(0.40)
 
 while True:
   curr = subprocess.check_output(['mpc', 'current']).split('\n')[0]
