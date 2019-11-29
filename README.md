@@ -1,22 +1,17 @@
-# README #
-This is the code we found worked best with the I2C 16x2 character display. 
+# (Yet Another) Raspberry Pi Music Player
+A very simplistic, Raspberry Pi Zero based mp3 player featuring:
+* [Music Player Daemon](https://www.musicpd.org/) + [Music Player Client](https://www.musicpd.org/clients/mpc/)
+* randomised playlist
+* only 3 buttons:
+ * play/pause (toggles play/pause)
+ * previous (like the song and want to hear it again)
+ * next (hate the song and want to hear something else)
+* LCD display showing current song
 
-Credit for the working code goes to "natbett" on the [Raspberry Pi Forums](http://www.raspberrypi.org/forums/viewtopic.php?f=32&t=34261&p=378524) & Michael Horne's Tutorial on the awesome [RasPi Pod](http://www.recantha.co.uk/blog/?p=4849)
+There are two scripts which are run on system start:
+* MusicMonitor.py
+ * polls buttons for what to do
+* WhatsPlaying.py
+ * scrolls current song across LCD display
 
-To get going follow the instructions below. Automatic Setup should work perfectly fine on a new SD card. If not we recommend to use manual setup
-
-# Automatic Setup #
-```
-git clone https://bitbucket.org/ryanteckltd/16x2-python-i2c-lib.git
-cd 16*
-sh LCDinstall.sh
-```
-
-Not tested for Raspbian Jan 31st.
-
-# Manual Setup #
-First install python-smbus using "sudo apt-get install python-smbus"
-
-sudo nano /etc/modprobe.d/raspi-blacklist.conf # infront of i2c
-sudo nano /etc/modules i2c-dev
-sudo reboot
+Now if I coloured it white and called it something like, _iShuffle_, I could make a fortune...
