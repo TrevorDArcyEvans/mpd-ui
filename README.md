@@ -3,7 +3,7 @@
 ![music-box](music-box.jpg "musicbox")
 
 A minimalist way to play music using:
-* [Raspberry Pi Zero Wireless](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
+* [Raspberry Pi Zero Wireless](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (£10 off ThePiHut)
 * [mpd - Music Player Daemon](https://www.musicpd.org/)
 * [mpc - Music Player Client](https://www.musicpd.org/clients/mpc/)
 * i2c 16x2 character LCD display (£5 off eBay)
